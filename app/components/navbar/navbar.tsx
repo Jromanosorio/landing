@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Navbar() {
     return(
-        <nav className="flex gap-[24px] items-center justify-between w-[100%]">
+        <nav className="flex gap-[24px] items-center justify-between w-[100%] px-8">
             <Image
                 className="dark:invert"
                 src="/next.svg"
