@@ -19,7 +19,7 @@ export default function ServiceCard(props: ServiceCardProps) {
                         props.servicesList.map((item, idx) => {
                             return (
                                 <li key={idx} className="text-[12px] text-gray-600 my-1 flex items-center gap-3">
-                                    <LuCheck className="text-green-600"/>
+                                    <LuCheck className="text-green-600" />
                                     {item}
                                 </li>
                             )
