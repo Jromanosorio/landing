@@ -12,10 +12,10 @@ export default function Navbar() {
                 priority
             />
             <ul className="flex gap-[24px]">
-                <a href="">Servicios</a>
-                <a href="">Sobre mi</a>
-                <a href="">Testimonios</a>
-                <a href="">Contacto</a>
+                <a href="#services">Servicios</a>
+                <a href="#about-me">Sobre mi</a>
+                <a href="#comments">Testimonios</a>
+                <a href="#contact">Contacto</a>
             </ul>
             <button className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto">Agenda tu sesion</button>
         </nav>
