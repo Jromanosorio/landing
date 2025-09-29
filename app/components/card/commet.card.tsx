@@ -10,7 +10,7 @@ interface CommentCardProps {
 
 export default function CommentCard(props: CommentCardProps) {
     return (
-        <div className="card max-w-[300px] p-6 rounded-xl bg-white shadow-xl">
+        <article className="card max-w-[300px] p-6 rounded-xl bg-white shadow-xl">
             <div className="flex gap-3 items-center">
                 {
                     props.image 
@@ -23,6 +23,6 @@ export default function CommentCard(props: CommentCardProps) {
             <div className="mt-3">
                 <p className="text-[13px] max-w-[65ch] my-4 text-gray-600 italic">"{props.comment}"</p>
             </div>
-        </div>
+        </article>
     )
 }
