@@ -7,12 +7,13 @@ import CommentCard from "./components/card/commet.card";
 import { services, clientsComments } from './data/data'
 import Info from "./components/info/info";
 import ContactForm from "./components/form/contact.form";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="max-w-[1920px] min-w-[768px] font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen py-8 gap-16 mx-auto">
+    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen py-8 gap-16 mx-auto">
       <Navbar />
-      <main className="gap-[32px] row-start-2 items-center sm:items-start w-[100%]">
+      <main className="max-w-[1920px] gap-[32px] row-start-2 items-center sm:items-start  w-[100%]">
         <section className="grid sm:grid-flow-row lg:grid-flow-col px-20 py-8 justify-items-center gap-15">
           <div className="text-center lg:text-start content-center justify-center">
             <h1 className="max-w-[65ch] text-5xl font-bold mb-6">Asesoria profesional certificada </h1>
@@ -105,13 +106,13 @@ export default function Home() {
             }
           </div>
         </section>
-        <section id="contact">
+        <section id="contact" className="mt-20 mb-30 px-20">
           <h1 className="text-2xl font-bold text-center">¿Listo para transformar tu carrera?</h1>
           <p className="text-gray-600 text-center max-w-[65ch] mx-auto">
             Agenda tu consulta gratuita de 30 minutos y descubre cómo puedo ayudarte a alcanzar tus objetivos profesionales
           </p>
-          <div className="grid sm:grid-flow-row lg:grid-flow-col px-20 py-8 justify-items-center gap-15 mt-10">
-            <div className="w-full max-w-[650px]">
+          <div className="container mx-auto grid lg:grid-cols-2 py-8 gap-15 mt-10">
+            <div>
               <h2 className="max-w-[65ch] text-lg font-bold mb-6">Informaci&oacute;n de contacto</h2>
               <div className="flex flex-col gap-5">
                 <Info icon={<LuMail />} title={"Email"} value={"example@gmail.com"} />
@@ -137,58 +138,39 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="w-full max-w-[650px]">
+            <div>
               <ContactForm />
             </div>
           </div>
         </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer className="w-full bg-gray-900 text-white">
+        <div className="container mx-auto">
+          <div className="grid md:grid-cols-2 py-8 gap-15 m-10">
+            <article className="">
+            <h2 className="text-[24px]">Asesor</h2>
+            <p className="text-gray-300 max-w-md">Transformando carreras profesionales a través de mentoría personalizada en vocación, empleabilidad y desarrollo profesional.</p>
+          </article>
+          <div className="grid grid grid-cols-2">
+            <article className="">
+              <h4 className="font-semibold">Servicios</h4>
+              <ul className="text-gray-300">
+                <li>Orientacion vocacional</li>
+                <li>Empleabilidad</li>
+                <li>Desarrollo profesional</li>
+              </ul>
+            </article>
+            <article className="">
+              <h4 className="font-semibold">Enlaces</h4>
+              <ul className="text-gray-300">
+                <li><Link href={'#about-me'}>Sobre m&iacute;</Link></li>
+                <li><Link href={'#comments'}>Testimonios</Link></li>
+                <li><Link href={'#contact'}>Contacto</Link></li>
+              </ul>
+            </article>
+          </div>
+          </div>
+        </div>
       </footer>
     </div>
   );
